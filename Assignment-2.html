@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-2</title>
+
+    <style>
+        #main{
+            background-color: blue;
+            width: 200px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 0px;
+            border-radius: 7px;
+        }
+        .pop{
+            width: 150px;
+            height: 30px;
+            border-radius: 8px;
+            border-color: gainsboro;
+            margin-bottom: 8px;
+        }
+        .pop:active{
+            border-color: red;
+        }
+        .pop:hover{
+            border-color: black;
+        }
+        button{
+            background-color: rgb(3, 129, 207);
+            border-color: rgb(3, 129, 207);
+            color: white;
+            width: 150px;
+            height: 30px;
+            font-weight: bolder;
+        }
+        #fo{
+            color: white;
+            font-weight: bolder;
+            margin-left: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Assignment-2</h1>
+    <ul>
+        <li>
+            <a href="./Home.html" style="color: black; text-decoration: none;">Home</a>
+        </li>
+    </ul>
+
+    <div id="main">
+
+        <h3 id="fo">Mark Sheet Form</h3>
+
+        <input id="mark1" type="number" placeholder="Enter Urdu Marks" class="pop">
+        <br />
+        <input id="mark2" type="number" placeholder="Enter English Marks" class="pop">
+        <br />
+        <input id="mark3" type="number" placeholder="Enter Math Marks" class="pop">
+        <br />
+        <input id="mark4" type="number" placeholder="Enter P.St Marks" class="pop">
+        <br />
+        <input id="mark5" type="number" placeholder="Enter Chemistry Marks" class="pop">
+        <br />
+        <input id="mark6" type="number" placeholder="Enter Physics Marks" class="pop">
+        <br>
+        <button onclick="grade()">Submit</button>
+    </div>
+    </center>
+    
+
+    <script>
+        function grade(){
+            var num1 = +document.getElementById("mark1").value;
+            var num2 = +document.getElementById("mark2").value;
+            var num3 = +document.getElementById("mark3").value;
+            var num4 = +document.getElementById("mark4").value;
+            var num5 = +document.getElementById("mark5").value;
+            var num6 = +document.getElementById("mark6").value;
+            var total =  num1 + num2 + num3 + num4 + num5 + num6;
+            var percent = + total / 600 * 100;
+            document.write("TOTAL MARKS " + "600" + "<br>");
+            document.write("YOUR TOTAL MARKS ARE" + " " + total + "<br>");
+            document.write("YOUR PERCENTAGE IS" + " " + percent + "%" + "<br>");
+            if (percent >= 80) {
+                document.write("YOUR GRADE IS A'");
+            } else if (percent >= 70) {
+                document.write("YOUR GRADE IS A")
+            } else if (percent >= 60) {
+                document.write("YOUR GRADE IS B")
+            } else if (percent >= 50) {
+                document.write("YOUR GRADE IS D")
+            } else if (percent >= 40) {
+                document.write("YOUR GRADE IS E")
+            } else {
+                document.write("YOUR GRADE IS FAIL")
+            }
+        } 
+    </script>
+</body>
+
+</html>
